@@ -1,5 +1,5 @@
-#
-# SQLAzure - Montar 1 srv con almceamiento o bbdd.ps1
+
+# SQLAzure - Montar 1 srv con almceamiento-bbdd.ps1
 # Montar un Servidor de SQL Azure
 # http://www.mundosql.es/
 #
@@ -7,10 +7,10 @@
 Clear 
 
 # Datos GR
-$rgName                = "SRV-SQLAzure"
+$rgName                = "SRV-AzureSQL"
 $location              = "West Europe"
-$NombreServidor        = "SRVsqlazure"
-$bbdd                  = "bbddsqlazure"
+$NombreServidor        = "sqlazurebd"
+$bbdd                  = "almacsqlazure"
 
 Write-Host("Desplegando Grupo de Recursos ... SQLAzure- SRV") 
 
@@ -23,7 +23,7 @@ New-AzureRmResourceGroup -Name $rgName -Location $location
 
 # Servidor 
 Write-Host("Creacion Servidor SQL Azure") -ForegroundColor Yellow
-New-AzureRmSqlServer -ResourceGroupName $rgName -ServerName $rgName  -Location $location -ServerVersion "12.0" -Verbose
+New-AzureRmSqlServer -ResourceGroupName $rgName -ServerName $NombreServidor -Location $location -ServerVersion "12.0" -Verbose
 
 # Crea almacenmiento
 Write-Host("Configuracion de Almacenamiento") -ForegroundColor Yellow
@@ -41,4 +41,4 @@ Write-Host("Fin Despliegue SQLAzure-SRV:    ",$fin) -ForegroundColor Magenta
 
 Write-Host("Grupo de Recursos SQLAzure-SRV .... Listo") 
 
-Write-Host("Reglas de FW desde Portal Nuevo")
+Write-Host("Reglas de FW desde Portal Nuevo. Tu IP pública es diferente a la mia")
