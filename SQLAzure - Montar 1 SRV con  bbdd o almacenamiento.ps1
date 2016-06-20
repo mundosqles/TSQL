@@ -1,5 +1,5 @@
 #
-# SQLAzure - Montar 1 srv con almceamiento/bbdd.ps1
+# SQLAzure - Montar 1 srv con almceamiento o bbdd.ps1
 # Montar un Servidor de SQL Azure
 # http://www.mundosql.es/
 #
@@ -10,7 +10,7 @@ Clear
 $rgName                = "SRV-SQLAzure"
 $location              = "West Europe"
 $NombreServidor        = "SRVsqlazure"
-$bbdd                 = "bbddsqlazure"
+$bbdd                  = "bbddsqlazure"
 
 Write-Host("Desplegando Grupo de Recursos ... SQLAzure- SRV") 
 
