@@ -17,8 +17,8 @@ LOG ON
     MAXSIZE = 25MB,
     FILEGROWTH = 5MB ) ;
 /*
-FILENAME = ombre fichero
-SIZE = TamañO del archivo
+FILENAME = Nombre y ubicación fichero bbdd y log
+SIZE = Tamaño del archivo
 MAXSIZE = Tamaño máximo que puede alcanzar el archivo
 FILEGROWTH = Incremento de crecimiento automático del archivo
 */
