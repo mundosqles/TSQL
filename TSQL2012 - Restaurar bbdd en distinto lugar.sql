@@ -1,0 +1,6 @@
+/* RESTAURAR BBDD TSQL EN UNA UBICACION MAQUINA FISICA */
+
+RESTORE DATABASE TSQL2012 FROM URL = 'https://almacbbdd.blob.core.windows.net/backup/201606202200TSQL2012.bak'
+WITH CREDENTIAL = 'TSQL2012'
+	,MOVE 'TSQL2012' TO 'M:\Proyectos\SQL Server -TSQL\bbdd\TSQL2012.mdf' 
+	,MOVE 'TSQL2012_log' TO 'M:\Proyectos\SQL Server -TSQL\bbdd\TSQL2012_log.ldf'
