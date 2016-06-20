@@ -1,4 +1,5 @@
 ﻿/* CREACION DE BASE DE DATOS */
+﻿/* Creación tipica de una BBDD*/
 /* http://www.mundosql.es/ */
 CREATE DATABASE AGENDA
 ON
